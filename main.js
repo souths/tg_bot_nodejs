@@ -9,11 +9,18 @@ function main(params) {
   if(tg_bot_token&&tg_user_id){
     const bot = new Telegraf(tg_bot_token)
     bot.start((ctx) => ctx.reply('Welcome'))
-    bot.help((ctx) => ctx.reply('Send me a sticker'))
+    bot.help((ctx) => ctx.reply('Send me a sticker 机器人bot'))
     bot.on('sticker', (ctx) => ctx.reply('👍'))
     bot.hears('hi', (ctx) => ctx.reply('Hey there'))
-    bot.hears('time', (ctx) => ctx.reply(Date.now().toString()))
-    bot.telegram.sendMessage(tg_user_id,'tg_user_idtg_user_id')
+    bot.hears('time', (ctx) => ctx.reply(new Date().Format("yyyy-MM-dd HH:mm:ss")))
+    bot.telegram.sendMessage(tg_user_id,'tg bot机器人 nodejs版启用成功')
+    bot.on('text', (ctx) => {
+      // Explicit usage
+      ctx.telegram.sendMessage(ctx.message.chat.id, `Hello ${ctx.state.role}`)
+    
+      // Using context shortcut
+      ctx.reply(`欢迎你输入文字 ${ctx.state.role}`)
+    })
     bot.launch()
   
     // Enable graceful stop
