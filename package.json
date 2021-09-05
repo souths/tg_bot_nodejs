@@ -1,0 +1,22 @@
+{
+  "name": "tg_bot_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souths/tg_bot_nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/souths/tg_bot_nodejs/issues"
+  },
+  "homepage": "https://github.com/souths/tg_bot_nodejs#readme",
+  "dependencies": {
+    "telegraf": "^4.4.1"
+  }
+}
