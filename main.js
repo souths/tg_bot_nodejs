@@ -34,12 +34,12 @@ function main(params) {
     bot.telegram.sendMessage(tg_user_id, 'tg bot机器人 nodejs版启用成功')
     bot.on('text', (ctx) => {
       // Explicit usage
-      ctx.telegram.sendMessage(ctx.message.chat.id, `text欢迎你输入文字 ${ctx}`)
+      ctx.telegram.sendMessage(ctx.message.chat.id, `text欢迎你输入文字 ${ctx.message.text}`)
 
       // Using context shortcut
     })
     bot.on('message', function (ctx, next) {
-      ctx.telegram.sendMessage(ctx.message.chat.id,`message欢迎你输入文字 ${ctx}`)
+      ctx.telegram.sendMessage(ctx.message.chat.id,`message欢迎你输入文字 ${ctx.message}`)
     });
     bot.launch()
 
