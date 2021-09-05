@@ -37,7 +37,7 @@ function main(params) {
        // 完整版
       ctx.telegram.sendMessage(ctx.message.chat.id, `text欢迎你输入文字 ${ctx.message.text}`)
       // 简化版
-      ctx.reply(ctx.message.chat.id, `text欢迎你输入文字 ${ctx.message.text}`)
+      // ctx.reply(`text欢迎你输入文字 ${ctx.message.text}`)
 
       // Using context shortcut
     })
