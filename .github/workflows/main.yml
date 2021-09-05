@@ -18,7 +18,10 @@ env:
 
 jobs:
     build:
+        # 指定运行所需要的虚拟机环境
         runs-on: ubuntu-latest
+        #仓库所有者，也就是你自己点 Star 才有效
+        if: github.event.repository.owner.id == github.event.sender.id
 
         steps:
             - name: Checkout codes
